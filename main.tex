@@ -67,6 +67,10 @@
 \titlespacing*{\chapter}{0pt}{-50pt}{40pt}
 \titleformat{\section}{\large\bfseries\raggedright}{{\sf\thesection}}{2em}{}
 \titleformat{\subsection}{\bfseries}{{\sf\thesubsection}}{1.5em}{}
+% Save this as default, so it can be revoked and restored
+\let\sectionDefault\section
+\let\titleformatDefault\titleformat
+
 % Header style
 \pagestyle{fancy}
 \renewcommand{\chaptermark}[1]{%
@@ -121,6 +125,7 @@
 
 \mainmatter
 \include{papers/1}
+\include{papers/2}
 
 \backmatter
 \include{90-contributors}
